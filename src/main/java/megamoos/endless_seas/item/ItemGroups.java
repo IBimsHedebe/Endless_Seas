@@ -1,6 +1,7 @@
 package megamoos.endless_seas.item;
 
 import megamoos.endless_seas.EndlessSeas;
+import megamoos.endless_seas.block.ModBlocks;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -18,6 +19,7 @@ public class ItemGroups {
                     .displayName(Text.translatable("itemgroup.endless_seas.endless_seas_items"))
                     .entries((displayContext, entries) -> {
                       entries.add(ModItems.TRASH);
+                      entries.add(ModBlocks.TRASH_BLOCK);
 
                     }).build());
 

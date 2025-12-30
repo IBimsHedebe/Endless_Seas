@@ -1,5 +1,6 @@
 package megamoos.endless_seas;
 
+import megamoos.endless_seas.block.ModBlocks;
 import megamoos.endless_seas.item.ItemGroups;
 import megamoos.endless_seas.item.ModItems;
 import net.fabricmc.api.ModInitializer;
@@ -15,6 +16,9 @@ public class EndlessSeas implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		ModItems.registerModItems();
+
+		ModBlocks.registerModBlocks();
+
 		ItemGroups.registerItemGroups();
 	}
 }
