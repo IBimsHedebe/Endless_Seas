@@ -1,6 +1,7 @@
 package megamoos.endless_seas.block;
 
 import megamoos.endless_seas.EndlessSeas;
+import megamoos.endless_seas.block.custom.DirtyTrashBlock;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
@@ -15,6 +16,9 @@ public class ModBlocks {
     public static final Block TRASH_BLOCK = registerBlock("trash_block",
             new Block(AbstractBlock.Settings.create().strength(2f)
                     .requiresTool().sounds(BlockSoundGroup.MOSS_BLOCK)));
+
+    public static final Block DIRTY_TRASH_BLOCK = registerBlock("dirty_trash_block",
+            new DirtyTrashBlock(AbstractBlock.Settings.create().strength(3).requiresTool()));
 
     private static Block registerBlock(String name, Block block){
         registerBlockItem(name, block);

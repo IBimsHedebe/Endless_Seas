@@ -20,6 +20,7 @@ public class ItemGroups {
                     .entries((displayContext, entries) -> {
                       entries.add(ModItems.TRASH);
                       entries.add(ModBlocks.TRASH_BLOCK);
+                      entries.add(ModBlocks.DIRTY_TRASH_BLOCK);
 
                     }).build());
 
