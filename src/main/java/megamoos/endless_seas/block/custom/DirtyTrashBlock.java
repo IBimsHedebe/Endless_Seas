@@ -1,6 +1,7 @@
 package megamoos.endless_seas.block.custom;
 
 import megamoos.endless_seas.item.ModItems;
+import megamoos.endless_seas.util.ModTags;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.Entity;
@@ -33,11 +34,16 @@ public class DirtyTrashBlock extends Block {
     public void onSteppedOn(World world, BlockPos pos, BlockState state, Entity entity) {
 
         if(entity instanceof ItemEntity ItemEntity){
-            if(ItemEntity.getStack().getItem() == Items.DIRT){
+            if(isValidItem(ItemEntity.getStack())){
                 ItemEntity.setStack(new ItemStack(ModItems.TRASH, ItemEntity.getStack().getCount()));
             }
         }
 
         super.onSteppedOn(world, pos, state, entity);
     }
+
+    private boolean isValidItem(ItemStack stack){
+        return stack.isIn(ModTags.Items.TRANSFORMABLE_ITEMS);
+    }
+
 }
