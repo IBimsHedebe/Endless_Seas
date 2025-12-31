@@ -2,6 +2,7 @@
   "item.endless_seas.trash": "Trash",
 
   "block.endless_seas.trash_block": "Trash Block",
+  "block.endless_seas.dirty_trash_block": "Dirty Trash Block",
 
   "itemgroup.endless_seas.endless_seas_items": "Endless Seas Items"
 }
