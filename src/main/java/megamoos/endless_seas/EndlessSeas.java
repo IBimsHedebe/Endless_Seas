@@ -3,6 +3,7 @@ package megamoos.endless_seas;
 import megamoos.endless_seas.block.ModBlocks;
 import megamoos.endless_seas.item.ItemGroups;
 import megamoos.endless_seas.item.ModItems;
+import megamoos.endless_seas.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -20,5 +21,7 @@ public class EndlessSeas implements ModInitializer {
 		ModBlocks.registerModBlocks();
 
 		ItemGroups.registerItemGroups();
+
+		ModWorldGeneration.generateModWorld();
 	}
 }
